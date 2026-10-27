@@ -1,0 +1,20 @@
+{
+  "count": 1,
+  "next": null,
+  "results": [
+    {
+      "id": 50,
+      "name": "old-sw1.ok1",
+      "status": {"value": "active", "label": "Active"},
+      "role": {"name": "", "slug": ""},
+      "device_role": {"name": "Switch", "slug": "switch"},
+      "site": {"id": 20, "name": "OK1", "slug": "ok1"},
+      "rack": {"name": "Rack-A1", "id": 100},
+      "position": 5,
+      "primary_ip4": {"address": "10.1.2.99/24", "id": 510},
+      "primary_ip6": null,
+      "tags": [],
+      "custom_fields": {}
+    }
+  ]
+}

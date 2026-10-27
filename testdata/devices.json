@@ -1,0 +1,76 @@
+{
+  "count": 5,
+  "next": null,
+  "results": [
+    {
+      "id": 1,
+      "name": "kn-sw4.ok1",
+      "status": {"value": "active", "label": "Active"},
+      "role": {"name": "Switch", "slug": "switch"},
+      "device_role": {"name": "", "slug": ""},
+      "site": {"id": 10, "name": "Lab 1", "slug": "lab-1"},
+      "rack": {"name": "Rack-A1", "id": 100},
+      "position": 12,
+      "primary_ip4": {"address": "10.1.2.3/24", "id": 501},
+      "primary_ip6": {"address": "2001:db8:1:123::1/64", "id": 502},
+      "tags": [{"name": "production", "slug": "production"}],
+      "custom_fields": {}
+    },
+    {
+      "id": 2,
+      "name": "nuc01.ok1",
+      "status": {"value": "active", "label": "Active"},
+      "role": {"name": "Server", "slug": "server"},
+      "device_role": {"name": "", "slug": ""},
+      "site": {"id": 20, "name": "OK1", "slug": "ok1"},
+      "rack": null,
+      "position": null,
+      "primary_ip4": {"address": "10.1.2.10/24", "id": 503},
+      "primary_ip6": null,
+      "tags": [],
+      "custom_fields": {}
+    },
+    {
+      "id": 3,
+      "name": "core-rtr1.ok1",
+      "status": {"value": "active", "label": "Active"},
+      "role": {"name": "Router", "slug": "router"},
+      "device_role": {"name": "", "slug": ""},
+      "site": {"id": 20, "name": "OK1", "slug": "ok1"},
+      "rack": {"name": "Rack-B2", "id": 200},
+      "position": 1,
+      "primary_ip4": {"address": "172.16.0.1/30", "id": 504},
+      "primary_ip6": {"address": "2001:db8:2:1::1/64", "id": 505},
+      "tags": [],
+      "custom_fields": {}
+    },
+    {
+      "id": 4,
+      "name": "",
+      "status": {"value": "inventory", "label": "Inventory"},
+      "role": {"name": "Server", "slug": "server"},
+      "device_role": {"name": "", "slug": ""},
+      "site": {"id": 10, "name": "Lab 1", "slug": "lab-1"},
+      "rack": null,
+      "position": null,
+      "primary_ip4": null,
+      "primary_ip6": null,
+      "tags": [],
+      "custom_fields": {}
+    },
+    {
+      "id": 5,
+      "name": "ws-desk1.example.com",
+      "status": {"value": "active", "label": "Active"},
+      "role": {"name": "Workstation", "slug": "workstation"},
+      "device_role": {"name": "", "slug": ""},
+      "site": {"id": 10, "name": "Lab 1", "slug": "lab-1"},
+      "rack": null,
+      "position": null,
+      "primary_ip4": {"address": "10.1.2.50/24", "id": 506},
+      "primary_ip6": null,
+      "tags": [],
+      "custom_fields": {}
+    }
+  ]
+}

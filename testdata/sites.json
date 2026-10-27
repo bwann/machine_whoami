@@ -1,0 +1,18 @@
+{
+  "count": 2,
+  "next": null,
+  "results": [
+    {
+      "id": 10,
+      "name": "Lab 1",
+      "slug": "lab-1",
+      "region": {"id": 1, "name": "Oklahoma", "slug": "oklahoma"}
+    },
+    {
+      "id": 20,
+      "name": "OK1",
+      "slug": "ok1",
+      "region": {"id": 1, "name": "Oklahoma", "slug": "oklahoma"}
+    }
+  ]
+}

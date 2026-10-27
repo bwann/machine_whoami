@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	# Binary is pre-built
+
+override_dh_auto_install:
+	install -D -m 0755 machine_whoami $(CURDIR)/debian/machine-whoami/usr/local/bin/machine_whoami
+	install -D -m 0640 machine_whoami.yaml $(CURDIR)/debian/machine-whoami/usr/local/etc/machine_whoami.yaml
+	install -D -m 0644 systemd/machine_whoami.service $(CURDIR)/debian/machine-whoami/etc/systemd/system/machine_whoami.service
+	install -D -m 0644 systemd/machine_whoami.timer $(CURDIR)/debian/machine-whoami/etc/systemd/system/machine_whoami.timer
+	install -d -m 0755 $(CURDIR)/debian/machine-whoami/var/tmp/machine_whoami
+
+# Files intentionally ship under /usr/local (matches the RPM); skip the policy check.
+override_dh_usrlocal:
+
+# Pre-built Go binary: ship it untouched.
+override_dh_dwz:
+
+override_dh_strip:
+
+# dh_fixperms resets the config to 0644; it holds the Netbox token.
+override_dh_fixperms:
+	dh_fixperms
+	chmod 0640 $(CURDIR)/debian/machine-whoami/usr/local/etc/machine_whoami.yaml
+
+override_dh_auto_test:
+	# Skip tests during packaging

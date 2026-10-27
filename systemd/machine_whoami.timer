@@ -1,0 +1,15 @@
+[Unit]
+Description=Run machine_whoami every 10 minutes
+
+[Timer]
+OnBootSec=1min
+OnCalendar=*:0/10
+# Spread hosts across the whole 10-minute window so they don't all hit Netbox
+# at once. FixedRandomDelay keeps each host's offset constant, so every host
+# still runs on an exact 10-minute cadence.
+RandomizedDelaySec=9min
+FixedRandomDelay=true
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target

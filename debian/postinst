@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "configure" ]; then
+    systemctl daemon-reload
+    systemctl enable machine_whoami.timer
+    systemctl restart machine_whoami.timer
+fi
+
+#DEBHELPER#

@@ -1,0 +1,6 @@
+# Compiled binaries
+machine_whoami
+main
+
+# Config with credentials
+machine_whoami.yaml

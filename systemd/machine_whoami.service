@@ -1,0 +1,11 @@
+[Unit]
+Description=Generate per-machine identity files from Netbox
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/machine_whoami -config /usr/local/etc/machine_whoami.yaml
+User=root
+Nice=10
+

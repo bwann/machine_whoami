@@ -1,0 +1,12 @@
+machine-whoami (1.4-1) stable; urgency=low
+
+  * Replace DEVICE_SUBNET with DEVICE_SUBNET4 and DEVICE_SUBNET6, derived
+    from the device's primary IPv4 and IPv6 addresses respectively; each is
+    empty if unset. Scripts reading DEVICE_SUBNET must be updated. The
+    format change rewrites every device file once.
+  * License under Apache-2.0
+  * Documentation updates; test data uses example.com and documentation
+    address ranges
+
+ -- Bryan Wann <bwann@wann.net>  Tue, 27 Oct 2026 13:53:29 -0700
+

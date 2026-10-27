@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "remove" ]; then
+    systemctl stop machine_whoami.timer || true
+    systemctl disable machine_whoami.timer || true
+    systemctl stop machine_whoami.service || true
+fi
+
+#DEBHELPER#

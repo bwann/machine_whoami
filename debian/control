@@ -1,0 +1,14 @@
+Source: machine-whoami
+Section: admin
+Priority: optional
+Maintainer: Bryan Wann <bwann@wann.net>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+
+Package: machine-whoami
+Architecture: amd64
+Depends: ${misc:Depends}, systemd
+Description: Generate per-machine identity files from Netbox
+ machine_whoami fetches device metadata from Netbox and writes per-machine
+ identity files in bash-compatible NAME=VALUE format. Designed for fleets
+ up to 100,000 devices across many sites/regions.
