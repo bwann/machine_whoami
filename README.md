@@ -5,7 +5,14 @@ configuration management, sourced from system data in Netbox. Each host's file
 is intended to end up on that host as e.g. `/etc/machine_whoami`.
 
 It pulls a select list of fields from Netbox for each host and writes these to
-a Bash-compatible plain text file.
+a plain text file in Bash-compatible KEY="VALUE" format.
+
+Example uses:
+
+* Source directly into Bash scripts with `source /etc/machine_whoami`
+* Region/datacenter/rack aware operations, e.g. build my DC/regional foobar server hostname foobar.$dc.example.com
+* Labeling Kubernetes nodes with per-rack BGP AS numbers to consume with Cilium
+* Disable starting services when Netbox device status is something other than 'Active'
 
 `machine_whoami` is intended to run from a central or regional host periodically.
 It writes all output files for a set of hosts in bulk to a local directory,
@@ -21,12 +28,6 @@ The whoami files are expected to rarely, if ever, change for the lifecycle of
 the server. But if changes are made in Netbox to a system's location or network,
 the changes are faithfully updated in whoami.
 
-Example uses:
-
-* Source directly into Bash scripts with `source /etc/machine_whoami`
-* Region/datacenter/rack aware operations, e.g. build my DC/regional foobar server hostname
-* Labeling Kubernetes nodes with per-rack BGP AS numbers to consume with Cilium
-* Disable starting services when Netbox device status is something other than 'Active'
 
 ## Output format
 
